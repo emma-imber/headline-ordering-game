@@ -5,6 +5,7 @@ interface HeadlinesProps {
     headline: string;
     standfirst: string;
     webPublicationDate: string;
+    url: string;
   }[]>;
 }
 
@@ -54,7 +55,9 @@ export default function Headlines(props: HeadlinesProps) {
                   </svg>
                 </button>
               )}
-            <p class="headline-para">{entry.headline}</p>
+            <a href={entry.url} target="_blank" class="headline-para">
+              {entry.headline}
+            </a>
             <p class="standfirst">{entry.standfirst}</p>
             {index < 4 &&
               (

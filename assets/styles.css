@@ -22,7 +22,7 @@ button.submit {
   color: #0077b6;
   border-radius: 0.2rem;
   padding: 5px;
-  font-family: "GH Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-weight: 600;
 }
 button.submit:hover {
@@ -96,6 +96,7 @@ html {
   padding-bottom: 0;
   margin-top: 3px;
   font-weight: 600;
+  color: white;
 }
 
 .standfirst {
