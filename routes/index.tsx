@@ -6,13 +6,17 @@ import Headlines from "../islands/Headlines.tsx";
 import Submit from "../islands/Submit.tsx";
 
 export default define.page(function Home() {
-  const headlines = useSignal([
-    data[Math.floor(Math.random() * data.length)],
-    data[Math.floor(Math.random() * data.length)],
-    data[Math.floor(Math.random() * data.length)],
-    data[Math.floor(Math.random() * data.length)],
-    data[Math.floor(Math.random() * data.length)],
-  ]);
+  function getRandomIndices(quantity: number): Set<number> {
+    const set = new Set<number>();
+    while (set.size < quantity) {
+      set.add(Math.floor(Math.random() * data.length));
+    }
+    return set;
+  }
+
+  const dataIndices = getRandomIndices(5);
+
+  const headlines = useSignal([...dataIndices].map((index) => data[index]));
 
   const sortedHeadlines = [...headlines.value].sort(function (a, b) {
     const keyA = new Date(a.webPublicationDate);
