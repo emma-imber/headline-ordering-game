@@ -23,6 +23,7 @@ button.submit {
   border-radius: 0.2rem;
   padding: 5px;
   font-family: "GH Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
+  font-weight: 600;
 }
 button.submit:hover {
   font-size: 1rem;
@@ -37,17 +38,25 @@ svg {
 }
 
 span.animate {
-  animation: fadeInAnimation ease-in 3s;
+  animation: slideInAnimation ease-in 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  position: absolute;
+  margin-left: 10px;
+  font-size: 1rem;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  rotate: -20deg;
 }
-@keyframes fadeInAnimation {
+
+@keyframes slideInAnimation {
   0% {
-    opacity: 0;
+    margin-top: -70px;
+    rotate: 360deg;
   }
 
   100% {
-    opacity: 1;
+    margin-top: 0px;
+    rotate: -20deg;
   }
 }
 
@@ -164,7 +173,7 @@ html {
   font-weight: 700;
 }
 .max-w-screen-md {
-  max-width: 768px;
+  max-width: 850px;
 }
 .flex-col {
   flex-direction: column;

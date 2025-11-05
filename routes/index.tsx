@@ -34,7 +34,10 @@ export default define.page(function Home() {
         <h1>
           📰 That's old news! <span class="animate">... or is it???</span>
         </h1>
-        <p>Can you sort the following headlines into chronological order?</p>
+        <p>
+          Can you sort the following headlines into chronological order? From
+          earliest at the top, to latest at the bottom.
+        </p>
         <Headlines headlines={headlines} />
         <Submit
           submitted={submitted}

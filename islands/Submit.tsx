@@ -66,12 +66,9 @@ export default function Submit(props: SubmitButtonProps) {
         )}
       {(props.submitted.value && !props.answersAreCorrect.value) &&
         (
-          <>
-            <p>Incorrect 😢</p>
-            <button type="button" class="submit" onClick={tryAgain}>
-              Try again?
-            </button>
-          </>
+          <button type="button" class="submit" onClick={tryAgain}>
+            Incorrect 😢 Try again?
+          </button>
         )}
     </>
   );
