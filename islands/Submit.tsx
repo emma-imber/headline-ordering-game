@@ -52,7 +52,10 @@ export default function Submit(props: SubmitButtonProps) {
             <Fireworks
               autostart
               ref={ref}
-              options={{ opacity: 0.5 }}
+              options={{
+                opacity: 0.6,
+                explosion: 10,
+              }}
               style={{
                 top: 0,
                 left: 0,
